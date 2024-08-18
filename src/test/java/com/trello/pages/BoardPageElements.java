@@ -26,7 +26,7 @@ public class BoardPageElements extends CommonMethods {
 	public WebElement cancelAddListButton;
 	
 	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2")
-	public List<WebElement> listOfLists;
+	public List<WebElement> listOfListNames;
 	
 	@FindBy(xpath = "//ol[@id='board']/li/div/div[3]/button[1]/span")
 	public List<WebElement> addAcardButtons;
@@ -36,6 +36,9 @@ public class BoardPageElements extends CommonMethods {
 	
 	@FindBy(xpath = "//ol[@id='board']/li/div/ol/li/form/div/button[1]")
 	public WebElement addCardButton;
+	
+	@FindBy(xpath = "//ol[@data-testid='list-cards']/li/div//a")
+	public List<WebElement> listOfCardNames;
 	
 	@FindBy(xpath = "//button[@aria-label='Show menu']")
 	public WebElement menuIconButton;

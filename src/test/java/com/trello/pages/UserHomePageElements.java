@@ -9,6 +9,9 @@ import com.trello.utils.CommonMethods;
 
 public class UserHomePageElements extends CommonMethods{
 	
+	@FindBy(xpath = "//div[@data-testid='header-member-menu-avatar']")
+	public WebElement accountName;
+	
 	@FindBy(xpath = "//nav[@id='header']/div[1]/div/div[3]/button")
 	public WebElement fCreateButton;
 	
