@@ -28,8 +28,32 @@ public class BoardPageElements extends CommonMethods {
 	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2")
 	public List<WebElement> listOfListNames;
 	
-	@FindBy(xpath = "//ol[@id='board']/li/div/div[3]/button[1]/span")
-	public List<WebElement> addAcardButtons;
+	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'ToDo')]")
+	public WebElement toDoList;
+	
+	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'Backlog')]")
+	public WebElement backlogList;
+	
+	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'Doing')]")
+	public WebElement doingList;
+	
+	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'Testing')]")
+	public WebElement testingList;
+	
+	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'Done')]")
+	public WebElement doneList;
+	
+	@FindBy(xpath = "//*[@id='board']/li[2]/div/div[3]/button[1]")
+	public WebElement addCardInToDoList;
+	
+	@FindBy(xpath = "//*[@id='board']/li[2]/div/ol/li/form/div/button[2]/span/span")
+	public WebElement cancelAddingCardInToDoList;
+	
+	@FindBy(xpath = "//*[@id='board']/li[1]/div/div[3]/button[1]")
+	public WebElement addCardInBacklogList;
+	
+	@FindBy(xpath = "//*[@id='board']/li[1]/div/ol/li/form/div/button[2]/span/span")
+	public WebElement cancelAddingCardInBacklogList;
 	
 	@FindBy(xpath = "//ol[@id='board']/li/div/ol/li/form/textarea")
 	public WebElement enterCardNameBox;

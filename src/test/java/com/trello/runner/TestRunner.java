@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/resources/features",
 		glue = "com.trello.steps", 
 		dryRun = false, 
-		tags = "@smoke3",
+		tags = "@smoke4",
 
 		monochrome = true,
 
