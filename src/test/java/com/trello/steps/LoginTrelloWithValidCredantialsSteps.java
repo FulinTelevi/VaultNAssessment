@@ -13,6 +13,8 @@ public class LoginTrelloWithValidCredantialsSteps extends CommonMethods {
 	@Given("User navigates to trello website and click login button")
 	public void user_navigates_to_trello_website_and_click_login_button() {
 	    
+		wait(2);
+		
 		click(homePage.fLoginButton);
 		wait(2);
 	}

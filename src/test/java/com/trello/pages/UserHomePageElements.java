@@ -24,6 +24,9 @@ public class UserHomePageElements extends CommonMethods{
 	@FindBy(xpath = "//button[@data-testid='create-board-submit-button']")
 	public WebElement sCreateButton;
 	
+	@FindBy(xpath = "//div[@class='board-tile-details is-badged']/div[1]")
+	public WebElement openTheBoardButton;
+	
 	public UserHomePageElements() {
 		PageFactory.initElements(driver, this);
 	}
