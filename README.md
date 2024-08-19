@@ -52,7 +52,7 @@ The following scenarios are automated:
       -Automate closing the "VaultN" board.
       -Automate deleting the "VaultN" board.
 
-  Running the test with Junit in TestRunner class
+  Running the test with Junit in TestRunner class by using feature file tags
   
   Common Utility Methods
     This project includes common utility methods to handle interactions such as clicking elements, sending keys, and JavaScript interactions for smooth testing with Selenium.
