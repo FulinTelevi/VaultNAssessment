@@ -21,12 +21,10 @@ public class MoveCardsSteps extends CommonMethods{
 		}
 		
 		
-		
-		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-        jsExecutor.executeScript("arguments[0].click();", boardPage.moveAction);
+		jsClick(boardPage.moveAction);
         wait(2);
 		
-        jsExecutor.executeScript("arguments[0].click();", boardPage.selectListForMoving);
+        jsClick(boardPage.selectListForMoving);
         wait(2);
         
         sendText(boardPage.selectListForMoving,"Done");
@@ -51,11 +49,10 @@ public class MoveCardsSteps extends CommonMethods{
 				}
 			}
 			
-			JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-			jsExecutor.executeScript("arguments[0].click();", boardPage.moveAction);
+			jsClick(boardPage.moveAction);
 	        wait(2);
 			
-	        jsExecutor.executeScript("arguments[0].click();", boardPage.selectListForMoving);
+	        jsClick(boardPage.selectListForMoving);
 	        wait(2);
 	        
 	        sendText(boardPage.selectListForMoving,"Testing");
@@ -81,11 +78,10 @@ public class MoveCardsSteps extends CommonMethods{
 			}
 		}
 		
-		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("arguments[0].click();", boardPage.moveAction);
+		jsClick(boardPage.moveAction);
         wait(2);
 		
-        jsExecutor.executeScript("arguments[0].click();", boardPage.selectListForMoving);
+        jsClick(boardPage.selectListForMoving);
         wait(2);
         
         sendText(boardPage.selectListForMoving,"Doing");
@@ -109,11 +105,10 @@ public class MoveCardsSteps extends CommonMethods{
 			}
 		}
 		
-		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("arguments[0].click();", boardPage.moveAction);
+		jsClick(boardPage.moveAction);
         wait(2);
 		
-        jsExecutor.executeScript("arguments[0].click();", boardPage.selectListForMoving);
+        jsClick(boardPage.selectListForMoving);
         wait(2);
         
         sendText(boardPage.selectListForMoving,"Doing");

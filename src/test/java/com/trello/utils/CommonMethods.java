@@ -25,18 +25,6 @@ public class CommonMethods extends PageInitializer{
 		element.clear();
 		element.sendKeys(text);
 	}
-
-	public static void click(WebElement element) {
-		waitForClickability(element);
-		element.click();
-	}
-
-	public static JavascriptExecutor getJSObject() {
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		return js;
-
-	}
 	
 	public static WebDriverWait getWaitObject() {
 
@@ -59,7 +47,7 @@ public class CommonMethods extends PageInitializer{
 
 		return getWaitObject().until(ExpectedConditions.visibilityOf(element));
 	}
-
+	
 	public static void wait(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);
@@ -67,6 +55,18 @@ public class CommonMethods extends PageInitializer{
 			e.printStackTrace();
 		}
 	}
+	
+
+	public static void click(WebElement element) {
+		waitForVisibility(element);
+		element.click();
+	}
+
+	public void jsClick(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
+    }
+
 	
 	public static byte[] takeScreenShot(String fileName) {
 
@@ -94,36 +94,5 @@ public class CommonMethods extends PageInitializer{
 		return sdf.format(date);
 	}
 	
-	public void moveCard(String cardTitle, String sourceListName, String targetListName) {
-		
-		WebElement sourceList = boardPage.findList(sourceListName);
-		WebElement targetList = boardPage.findCard(cardTitle);
-		WebElement card = boardPage.findCard(cardTitle);
-		
-		Actions actions = new Actions(driver);
-		actions.clickAndHold(card).perform();
-		
-        actions.moveToElement(targetList).release(targetList).perform();
-		
-	}
 	
-	public static WebElement findCard(String cardTitle) {
-		
-	    for (WebElement card : boardPage.listOfCardNames) {
-	        if (card.getText().equalsIgnoreCase(cardTitle)) {
-	            return card;
-	        }      	
-	    }
-		return null;
-	}
-	
-	public static WebElement findList(String listName) {
-		
-		for(WebElement list : boardPage.listOfListNames) {
-			if(list.getText().equalsIgnoreCase(listName)) {
-				return list;
-			}
-		}
-		return null;
-	}
 }

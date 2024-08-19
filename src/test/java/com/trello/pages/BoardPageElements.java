@@ -76,11 +76,20 @@ public class BoardPageElements extends CommonMethods {
 	@FindBy(xpath = "//*[@id='layer-manager-card-back']/div/div/div/div/button/span/span")
 	public WebElement closeTheCard;
 	
-	@FindBy(xpath = "//button[@aria-label='Show menu']")
+	@FindBy(xpath = "//*[@id='content']/div/div/div[1]/div[1]/div/span[2]/button[2]/span/span")
 	public WebElement menuIconButton;
 	
-	@FindBy(xpath = "//div[@class='board-menu-container']//div[2]/div[1]/ul/li/a/span")
-	public List<WebElement> listsOfMenu;
+	@FindBy(xpath = "//*[@id='content']/div/div/div[2]/div/div/div/div[2]/div/ul/li[17]/a")
+	public WebElement closeBoardOption;
+	
+	@FindBy(xpath = "//input[@data-testid='close-board-confirm-button']")
+	public WebElement confirmButtonForCloseTheBoard;
+	
+	@FindBy(xpath = "//div[@class='board-menu-header-content']//a[2]")
+	public WebElement closeTheBoardMenu;
+	
+	@FindBy(xpath = "//button[@data-testid='workspace-chooser-trigger-button']")
+	public WebElement reopenBoardButton;
 	
 	@FindBy(xpath = "//div[@class='board-menu-container']//div[2]/div[1]/ul/div[3]//button")
 	public WebElement deleteBoardButton;
