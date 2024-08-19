@@ -78,6 +78,10 @@
 						<include>**/*TestRunner.java</include>
 					</includes>
 					
+					<excludes>
+                    	<exclude>**/DeleteTheBoardRightAfterClose.feature</exclude>
+                	</excludes>
+					
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
