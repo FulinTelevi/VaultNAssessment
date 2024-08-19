@@ -10,6 +10,7 @@ Feature: Create Lists in VaultN Board
   @smoke3
   Scenario: Successful Create Lists in VaultN Board
     Given User clicks VaultN board
+    And User cleans exist lists from the board
     And User clicks add another list button
     And User enters list name as Backlog in the board and click add list button
     And User enters list name as ToDo in the board and click add list button

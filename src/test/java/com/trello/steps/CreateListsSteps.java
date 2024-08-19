@@ -9,26 +9,32 @@ public class CreateListsSteps extends CommonMethods {
 	@Given("User clicks VaultN board")
 	public void user_clicks_vault_n_board() {
 	    
-		wait(2);
-		
+
 		click(userHomePage.openTheBoardButton);
 		wait(2);
 		
+			
+	}
+	
+	@Given("User cleans exist lists from the board")
+	public void user_cleans_exist_lists_from_the_board() {
+		
 		click(boardPage.menuOptionForExistToDoList);
-		wait(2);
+		wait(5);
 		click(boardPage.archiveListButton);
-		wait(2);
+		wait(5);
 		
 		click(boardPage.menuOptionForExistDoingList);
-		wait(2);
+		wait(5);
 		click(boardPage.archiveListButton);
+		wait(5);
 		
 		click(boardPage.menuOptionForExistDoneList);
-		wait(2);
+		wait(5);
 		click(boardPage.archiveListButton);
-		wait(2);
-		
+		wait(3);
 	}
+	
 	@Given("User clicks add another list button")
 	public void user_clicks_add_another_list_button() {
 		

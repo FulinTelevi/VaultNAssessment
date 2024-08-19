@@ -74,6 +74,7 @@
     			<version>3.2.3</version>	
     			
     			<configuration>
+    				
 					<includes>
 						<include>**/*TestRunner.java</include>
 					</includes>

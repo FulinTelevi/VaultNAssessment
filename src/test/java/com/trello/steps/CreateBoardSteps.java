@@ -28,7 +28,8 @@ public class CreateBoardSteps extends CommonMethods {
 	public void user_clicks_create_button() {
 	    
 		click(userHomePage.sCreateButton);
-		wait(2);
+		wait(3);
+		
 	}
 
 
