@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>VaultNAssessment</td>
+        <td>1</td>
+      <td>19 Aug 2024, 15:37</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.trello.steps.CloseTheBoardSteps.user_clicks_close_the_board_menu_x_icon()</td>
+              <td>1</td>
+              <td class="duration" data-value="341000">0.000</td>
+              <td class="duration" data-value="341000">0.000</td>
+              <td class="duration" data-value="341000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CloseTheBoardSteps.user_clicks_on_the_close_the_board_option_from_the_menu_that_opens_and_confirms_close_the_board_by_clicking_close_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="190500">0.000</td>
+              <td class="duration" data-value="190500">0.000</td>
+              <td class="duration" data-value="381000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CloseTheBoardSteps.user_clicks_on_the_icon_at_the_top_right_of_the_board_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="118000">0.000</td>
+              <td class="duration" data-value="118000">0.000</td>
+              <td class="duration" data-value="236000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CloseTheBoardSteps.user_verifies_that_board_is_closed()</td>
+              <td>1</td>
+              <td class="duration" data-value="111000">0.000</td>
+              <td class="duration" data-value="111000">0.000</td>
+              <td class="duration" data-value="111000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateBoardSteps.user_clicks_create_board_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2107027000">2.107</td>
+              <td class="duration" data-value="2107027000">2.107</td>
+              <td class="duration" data-value="2107027000">2.107</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateBoardSteps.user_clicks_create_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2100323000">2.100</td>
+              <td class="duration" data-value="2100323000">2.100</td>
+              <td class="duration" data-value="2100323000">2.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateBoardSteps.user_clicks_create_button_on_the_user_homepage()</td>
+              <td>1</td>
+              <td class="duration" data-value="2863738000">2.863</td>
+              <td class="duration" data-value="2863738000">2.863</td>
+              <td class="duration" data-value="2863738000">2.863</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateBoardSteps.user_enters_board_name_into_the_board_title_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="2140782000">2.140</td>
+              <td class="duration" data-value="2140782000">2.140</td>
+              <td class="duration" data-value="2140782000">2.140</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateCardsSteps.user_clicks_add_a_card_button_in_backlog_list_and_enters_card_name_as_ui_automation_and_clicks_add_card_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="4300333000">4.300</td>
+              <td class="duration" data-value="4300333000">4.300</td>
+              <td class="duration" data-value="4300333000">4.300</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateCardsSteps.user_clicks_add_a_card_button_in_backlog_list_and_enters_card_name_as_writing_test_scenarios_and_clicks_add_card_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="4338176000">4.338</td>
+              <td class="duration" data-value="4338176000">4.338</td>
+              <td class="duration" data-value="4338176000">4.338</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateCardsSteps.user_clicks_add_a_card_button_in_to_do_list_and_enters_card_name_as_build_a_collection_and_clicks_add_card_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2222114000">2.222</td>
+              <td class="duration" data-value="2222114000">2.222</td>
+              <td class="duration" data-value="2222114000">2.222</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateCardsSteps.user_clicks_add_a_card_button_in_to_do_list_and_enters_card_name_as_get_key_and_token_and_clicks_add_card_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2222897000">2.222</td>
+              <td class="duration" data-value="2222897000">2.222</td>
+              <td class="duration" data-value="2222897000">2.222</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateCardsSteps.user_clicks_add_a_card_button_in_to_do_list_and_enters_card_name_as_sign_up_for_trello_and_clicks_add_card_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="4401644000">4.401</td>
+              <td class="duration" data-value="4401644000">4.401</td>
+              <td class="duration" data-value="4401644000">4.401</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateCardsSteps.user_clicks_add_a_card_button_in_to_do_list_and_enters_card_name_as_working_on_task_and_clicks_add_card_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="3298510000">3.298</td>
+              <td class="duration" data-value="3298510000">3.298</td>
+              <td class="duration" data-value="3298510000">3.298</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateListsSteps.user_clicks_add_another_list_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="49000">0.000</td>
+              <td class="duration" data-value="49000">0.000</td>
+              <td class="duration" data-value="49000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateListsSteps.user_clicks_vault_n_board()</td>
+              <td>5</td>
+              <td class="duration" data-value="3298709600">3.298</td>
+              <td class="duration" data-value="3298709600">12.193</td>
+              <td class="duration" data-value="16493548000">16.493</td>
+              <td class="failed">20.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateListsSteps.user_enters_list_name_as_backlog_in_the_board_and_click_add_list_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="46000">0.000</td>
+              <td class="duration" data-value="46000">0.000</td>
+              <td class="duration" data-value="46000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateListsSteps.user_enters_list_name_as_doing_in_the_board_and_click_add_list_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="64000">0.000</td>
+              <td class="duration" data-value="64000">0.000</td>
+              <td class="duration" data-value="64000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateListsSteps.user_enters_list_name_as_done_in_the_board_and_click_add_list_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="103000">0.000</td>
+              <td class="duration" data-value="103000">0.000</td>
+              <td class="duration" data-value="103000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateListsSteps.user_enters_list_name_as_testing_in_the_board_and_click_add_list_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="223000">0.000</td>
+              <td class="duration" data-value="223000">0.000</td>
+              <td class="duration" data-value="223000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.CreateListsSteps.user_enters_list_name_as_to_do_in_the_board_and_click_add_list_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="101000">0.000</td>
+              <td class="duration" data-value="101000">0.000</td>
+              <td class="duration" data-value="101000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.DeleteTheBoardRightAfterCloseSteps.user_clicks_permanently_delete_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="77000">0.000</td>
+              <td class="duration" data-value="77000">0.000</td>
+              <td class="duration" data-value="77000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.DeleteTheBoardRightAfterCloseSteps.user_confirms_deleting_action_by_clicking_delete_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="93000">0.000</td>
+              <td class="duration" data-value="93000">0.000</td>
+              <td class="duration" data-value="93000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.DeleteTheBoardSteps.user_clicks_delete_button_for_vault_n_board()</td>
+              <td>1</td>
+              <td class="duration" data-value="86000">0.000</td>
+              <td class="duration" data-value="86000">0.000</td>
+              <td class="duration" data-value="86000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.DeleteTheBoardSteps.user_clicks_view_closed_boards_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="109000">0.000</td>
+              <td class="duration" data-value="109000">0.000</td>
+              <td class="duration" data-value="109000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.DeleteTheBoardSteps.user_confirms_deleting_action()</td>
+              <td>1</td>
+              <td class="duration" data-value="75000">0.000</td>
+              <td class="duration" data-value="75000">0.000</td>
+              <td class="duration" data-value="75000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.Hooks.finish(io.cucumber.java.Scenario)</td>
+              <td>8</td>
+              <td class="duration" data-value="389870125">0.389</td>
+              <td class="duration" data-value="389870125">1.715</td>
+              <td class="duration" data-value="3118961000">3.118</td>
+              <td class="failed">25.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.Hooks.start()</td>
+              <td>8</td>
+              <td class="duration" data-value="2628639375">2.628</td>
+              <td class="duration" data-value="2628639375">3.787</td>
+              <td class="duration" data-value="21029115000">21.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.LoginTrelloWithValidCredantialsSteps.user_enters_his_email_in_emailbox_and_click_continue_button()</td>
+              <td>8</td>
+              <td class="duration" data-value="3385066500">3.385</td>
+              <td class="duration" data-value="3385066500">12.968</td>
+              <td class="duration" data-value="27080532000">27.080</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.LoginTrelloWithValidCredantialsSteps.user_enters_his_password_in_passwordbox_and_click_log_in_button()</td>
+              <td>8</td>
+              <td class="duration" data-value="1940250250">1.940</td>
+              <td class="duration" data-value="1940250250">5.185</td>
+              <td class="duration" data-value="15522002000">15.522</td>
+              <td class="failed">37.50%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.LoginTrelloWithValidCredantialsSteps.user_navigates_to_trello_website_and_click_login_button()</td>
+              <td>8</td>
+              <td class="duration" data-value="6818553750">6.818</td>
+              <td class="duration" data-value="6818553750">12.195</td>
+              <td class="duration" data-value="54548430000">54.548</td>
+              <td class="failed">75.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.LoginTrelloWithValidCredantialsSteps.user_verifies_that_he_is_on_his_account_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="111000">0.000</td>
+              <td class="duration" data-value="111000">0.000</td>
+              <td class="duration" data-value="111000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.MoveCardsSteps.user_moves_build_a_collection_card_to_doing_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="59000">0.000</td>
+              <td class="duration" data-value="59000">0.000</td>
+              <td class="duration" data-value="59000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.MoveCardsSteps.user_moves_get_key_and_token_card_to_testing_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="60000">0.000</td>
+              <td class="duration" data-value="60000">0.000</td>
+              <td class="duration" data-value="60000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.MoveCardsSteps.user_moves_sign_up_for_trello_card_to_done_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="72000">0.000</td>
+              <td class="duration" data-value="72000">0.000</td>
+              <td class="duration" data-value="72000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trello.steps.MoveCardsSteps.user_moves_working_on_task_card_to_doing_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="69000">0.000</td>
+              <td class="duration" data-value="69000">0.000</td>
+              <td class="duration" data-value="69000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>36</td>
+            <td>77</td>
+            <td class="duration">2.179</td>
+            <td class="duration">54.548</td>
+            <td class="duration">2:47.790</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

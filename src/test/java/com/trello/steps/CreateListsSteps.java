@@ -13,6 +13,21 @@ public class CreateListsSteps extends CommonMethods {
 		
 		click(userHomePage.openTheBoardButton);
 		wait(2);
+		
+		click(boardPage.menuOptionForExistToDoList);
+		wait(2);
+		click(boardPage.archiveListButton);
+		wait(2);
+		
+		click(boardPage.menuOptionForExistDoingList);
+		wait(2);
+		click(boardPage.archiveListButton);
+		
+		click(boardPage.menuOptionForExistDoneList);
+		wait(2);
+		click(boardPage.archiveListButton);
+		wait(2);
+		
 	}
 	@Given("User clicks add another list button")
 	public void user_clicks_add_another_list_button() {

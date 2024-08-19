@@ -10,6 +10,18 @@ import com.trello.utils.CommonMethods;
 
 public class BoardPageElements extends CommonMethods{
 
+	@FindBy(xpath = "//*[@id='board']/li[1]/div/div[1]/button[2]/span/span")
+	public WebElement menuOptionForExistToDoList;
+	
+	@FindBy(xpath = "//*[@id='board']/li[2]/div/div[1]/button[2]/span/span")
+	public WebElement menuOptionForExistDoingList;
+	
+	@FindBy(xpath = "//*[@id='board']/li[3]/div/div[1]/button[2]/span/span")
+	public WebElement menuOptionForExistDoneList;
+	
+	@FindBy(xpath = "/html/body/div[3]/div/section/div/nav[2]/ul/li[2]/button/span/span")
+	public WebElement archiveListButton;
+	
 	@FindBy(xpath = "//ol[@id='board']/div/button")
 	public WebElement addAnotherListButton;
 	

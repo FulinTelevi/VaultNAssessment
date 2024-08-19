@@ -31,7 +31,7 @@ public class LoginTrelloWithValidCredantialsSteps extends CommonMethods {
 	    
 		sendText(homePage.passwordBox,ConfigsReader.getProperty("password"));
 		click(homePage.sLoginButton);
-		wait(5);
+		wait(10);
 	}
 	@Then("User verifies that he is on his account page.")
 	public void user_verifies_that_he_is_on_his_account_page() {
