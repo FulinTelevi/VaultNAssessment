@@ -101,7 +101,9 @@ public class CommonMethods extends PageInitializer{
 		WebElement card = boardPage.findCard(cardTitle);
 		
 		Actions actions = new Actions(driver);
-		actions.dragAndDrop(card, targetList).build().perform();
+		actions.clickAndHold(card).perform();
+		
+        actions.moveToElement(targetList).release(targetList).perform();
 		
 	}
 	

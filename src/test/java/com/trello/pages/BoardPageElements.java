@@ -64,6 +64,18 @@ public class BoardPageElements extends CommonMethods {
 	@FindBy(xpath = "//ol[@data-testid='list-cards']/li/div//a")
 	public List<WebElement> listOfCardNames;
 	
+	@FindBy(xpath = "//a[@data-testid='card-back-move-card-button']")
+	public WebElement moveAction;
+	
+	@FindBy(xpath = "//div[@data-testid='move-card-popover-select-list-destination']//input[@aria-autocomplete='list']")
+	public WebElement selectListForMoving;
+	
+	@FindBy(xpath = "//button[@data-testid='move-card-popover-move-button']")
+	public WebElement moveButton;
+	
+	@FindBy(xpath = "//*[@id='layer-manager-card-back']/div/div/div/div/button/span/span")
+	public WebElement closeTheCard;
+	
 	@FindBy(xpath = "//button[@aria-label='Show menu']")
 	public WebElement menuIconButton;
 	
