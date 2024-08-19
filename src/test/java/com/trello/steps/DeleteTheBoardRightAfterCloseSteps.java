@@ -15,7 +15,7 @@ public class DeleteTheBoardRightAfterCloseSteps extends CommonMethods{
 	@Given("User confirms deleting action by clicking delete button")
 	public void user_confirms_deleting_action_by_clicking_delete_button() {
 	    
-		click(boardPage.confirmButtonForDeleting);
+		click(boardPage.confirmButtonForDeleteTheBoard);
 		wait(2);
 	}
 }

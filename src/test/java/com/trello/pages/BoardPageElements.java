@@ -8,11 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.trello.utils.CommonMethods;
 
-public class BoardPageElements extends CommonMethods {
+public class BoardPageElements extends CommonMethods{
 
-	@FindBy(xpath = "//div[@aria-label='Board name']//h1")
-	public WebElement boardTitleName;
-	
 	@FindBy(xpath = "//ol[@id='board']/div/button")
 	public WebElement addAnotherListButton;
 	
@@ -25,23 +22,11 @@ public class BoardPageElements extends CommonMethods {
 	@FindBy(xpath = "//ol[@id='board']/div/form/div/button[2]")
 	public WebElement cancelAddListButton;
 	
-	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2")
-	public List<WebElement> listOfListNames;
+	@FindBy(xpath = "//ol[@id='board']/li/div/ol/li/form/textarea")
+	public WebElement enterCardNameBox;
 	
-	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'ToDo')]")
-	public WebElement toDoList;
-	
-	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'Backlog')]")
-	public WebElement backlogList;
-	
-	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'Doing')]")
-	public WebElement doingList;
-	
-	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'Testing')]")
-	public WebElement testingList;
-	
-	@FindBy(xpath = "//ol[@id='board']/li/div/div/div/h2[contains(text(),'Done')]")
-	public WebElement doneList;
+	@FindBy(xpath = "//ol[@id='board']/li/div/ol/li/form/div/button[1]")
+	public WebElement addCardButton;
 	
 	@FindBy(xpath = "//*[@id='board']/li[2]/div/div[3]/button[1]")
 	public WebElement addCardInToDoList;
@@ -54,12 +39,6 @@ public class BoardPageElements extends CommonMethods {
 	
 	@FindBy(xpath = "//*[@id='board']/li[1]/div/ol/li/form/div/button[2]/span/span")
 	public WebElement cancelAddingCardInBacklogList;
-	
-	@FindBy(xpath = "//ol[@id='board']/li/div/ol/li/form/textarea")
-	public WebElement enterCardNameBox;
-	
-	@FindBy(xpath = "//ol[@id='board']/li/div/ol/li/form/div/button[1]")
-	public WebElement addCardButton;
 	
 	@FindBy(xpath = "//ol[@data-testid='list-cards']/li/div//a")
 	public List<WebElement> listOfCardNames;
@@ -98,20 +77,7 @@ public class BoardPageElements extends CommonMethods {
 	public WebElement permanenetlyDeleteBoardButton;
 	
 	@FindBy(xpath = "//button[@data-testid= 'close-board-delete-board-confirm-button']")
-	public WebElement confirmButtonForDeleting;
-	
-	@FindBy(xpath = "//button[contains(text(),'View all closed boards')]")
-	public WebElement viewClosedBoardsButton;
-	
-	@FindBy(xpath = "//div[@id='layer-manager-overlay']/div/div/div/div/div//ul//li//div/div/a")
-	public List<WebElement> closedBoardsList;
-	
-	@FindBy(xpath = "//div[@id='layer-manager-overlay']/div/div/div/div/div/div/ul/li/div//button")
-	public List<WebElement> buttonsForClosedBoards;
-	
-	@FindBy(xpath = "//button[@data-testid='close-board-delete-board-confirm-button']")
 	public WebElement confirmButtonForDeleteTheBoard;
-	
 	
 	public BoardPageElements() {
 		PageFactory.initElements(driver, this);
