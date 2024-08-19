@@ -92,7 +92,26 @@ public class BoardPageElements extends CommonMethods {
 	public WebElement reopenBoardButton;
 	
 	@FindBy(xpath = "//div[@class='board-menu-container']//div[2]/div[1]/ul/div[3]//button")
-	public WebElement deleteBoardButton;
+	public WebElement deleteBoardButtonAfterCloseBoard;
+	
+	@FindBy(xpath = "//button[@data-testid='close-board-delete-board-button']")
+	public WebElement permanenetlyDeleteBoardButton;
+	
+	@FindBy(xpath = "//button[@data-testid= 'close-board-delete-board-confirm-button']")
+	public WebElement confirmButtonForDeleting;
+	
+	@FindBy(xpath = "//button[contains(text(),'View all closed boards')]")
+	public WebElement viewClosedBoardsButton;
+	
+	@FindBy(xpath = "//div[@id='layer-manager-overlay']/div/div/div/div/div//ul//li//div/div/a")
+	public List<WebElement> closedBoardsList;
+	
+	@FindBy(xpath = "//div[@id='layer-manager-overlay']/div/div/div/div/div/div/ul/li/div//button")
+	public List<WebElement> buttonsForClosedBoards;
+	
+	@FindBy(xpath = "//button[@data-testid='close-board-delete-board-confirm-button']")
+	public WebElement confirmButtonForDeleteTheBoard;
+	
 	
 	public BoardPageElements() {
 		PageFactory.initElements(driver, this);
